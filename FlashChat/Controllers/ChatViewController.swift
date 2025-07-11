@@ -10,6 +10,15 @@ import FirebaseAuth
 
 class ChatViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var messageTextField: UITextField!
+    
+    var messages: [Message] = [
+        Message(sender:"snigdha.17.tiwari@gmail.com", body: "Hi"),
+        Message(sender:"ts.poornima@gmail.com", body: "Hello"),
+        Message(sender:"snigdha.17.tiwari@gmail.com", body: "How are you?")
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "⚡️FlashChat"
@@ -27,5 +36,19 @@ class ChatViewController: UIViewController {
         }
         
     }
+    
+}
+
+extension ChatViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath)
+        cell.textLabel?.text = messages[indexPath.row].body
+        return cell
+    }
+    
     
 }
