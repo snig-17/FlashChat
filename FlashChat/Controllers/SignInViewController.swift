@@ -15,7 +15,7 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
         // Do any additional setup after loading the view.
     }
     
@@ -28,7 +28,7 @@ class SignInViewController: UIViewController {
                 } else {
                     self?.performSegue(withIdentifier: "SignInToChat", sender: self)
                 }
-                guard let strongSelf = self else { return }
+                guard self != nil else { return }
                 // ...
             }
         }
