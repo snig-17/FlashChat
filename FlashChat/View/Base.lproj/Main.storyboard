@@ -126,11 +126,34 @@
                     <connections>
                         <outlet property="emailTextField" destination="awE-am-ozC" id="MN2-Ny-Lit"/>
                         <outlet property="passwordTextField" destination="Nxc-vU-LdA" id="QXo-gr-UcL"/>
+                        <segue destination="w3C-p0-csb" kind="show" id="DCB-KS-JkR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m52-vd-yQH" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2016" y="-259"/>
+        </scene>
+        <!--Chat View-->
+        <scene sceneID="tcE-nQ-hbX">
+            <objects>
+                <viewController title="Chat View" id="w3C-p0-csb" customClass="ChatViewController" customModule="FlashChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wmp-Mv-AUz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vUr-Pu-Hmr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Dy-ID-U2R">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="eDh-le-MHM">
+                            <connections>
+                                <action selector="logOutPressed:" destination="w3C-p0-csb" id="94e-2s-sVq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhQ-Bm-jwa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3121" y="54"/>
         </scene>
         <!--SignIn View-->
         <scene sceneID="Ggp-hd-B0T">
@@ -179,6 +202,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="Mcj-P7-TUK" id="eAI-H7-5wC"/>
                         <outlet property="passwordTextField" destination="x1e-np-JXg" id="Bgs-Zt-BQ5"/>
+                        <segue destination="w3C-p0-csb" kind="show" id="uaU-ek-gch"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKV-1k-dP7" sceneMemberID="firstResponder"/>
@@ -186,6 +210,9 @@
             <point key="canvasLocation" x="2015" y="470"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="uaU-ek-gch"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
