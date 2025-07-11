@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignInViewController: UIViewController {
 
@@ -20,7 +21,17 @@ class SignInViewController: UIViewController {
     
 
     @IBAction func registerPressed(_ sender: Any) {
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+                if let e = error {
+                    print(e.localizedDescription)
+                } else {
+                    self?.performSegue(withIdentifier: "SignInToChat", sender: self)
+                }
+                guard let strongSelf = self else { return }
+                // ...
+            }
+        }
     }
-    
 
 }
