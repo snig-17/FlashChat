@@ -21,9 +21,9 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "⚡️FlashChat"
+        title = K.appName
         navigationItem.hidesBackButton = true
-        // Do any additional setup after loading the view.
+        tableView.dataSource = self
     }
     
     @IBAction func logOutPressed(_ sender: Any) {
@@ -52,3 +52,4 @@ extension ChatViewController: UITableViewDataSource {
     
     
 }
+

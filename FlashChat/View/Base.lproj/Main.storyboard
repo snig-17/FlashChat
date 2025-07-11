@@ -168,7 +168,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="Sav-sX-nxV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReusableCell" id="Sav-sX-nxV">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sav-sX-nxV" id="zOL-wo-AQn">
@@ -224,7 +224,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="mPq-Tc-fCc">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="snigdha.17.tiwari@gmail.com" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="mPq-Tc-fCc">
                                 <rect key="frame" x="30" y="187" width="333" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -262,6 +262,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="mPq-Tc-fCc" id="9G3-dA-XMq"/>
                         <outlet property="passwordTextField" destination="BO3-va-IOK" id="lyr-cA-yKq"/>
+                        <segue destination="w3C-p0-csb" kind="show" identifier="LogInToChat" id="PzY-HN-VfB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcb-xI-XTv" sceneMemberID="firstResponder"/>
@@ -269,6 +270,9 @@
             <point key="canvasLocation" x="2015" y="646"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="PzY-HN-VfB"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="BrandBlue">
             <color red="0.44705882352941179" green="0.72941176470588232" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
