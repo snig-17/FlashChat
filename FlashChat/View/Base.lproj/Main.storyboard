@@ -26,11 +26,17 @@
                                 <rect key="frame" x="0.0" y="604" width="393" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Register"/>
+                                <connections>
+                                    <segue destination="GUZ-EJ-dat" kind="show" id="ycA-43-2tM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEz-Yg-HOV">
                                 <rect key="frame" x="0.0" y="649" width="393" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign In"/>
+                                <connections>
+                                    <segue destination="2YO-ro-Wp2" kind="show" id="VJf-xv-NY0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -72,6 +78,112 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LwR-Wm-MnB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+        <!--Register View-->
+        <scene sceneID="SUs-q5-Xm0">
+            <objects>
+                <viewController title="Register View" id="GUZ-EJ-dat" customClass="RegisterViewController" customModule="FlashChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cJz-Cr-KKT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amj-fi-C8M" userLabel="Title Label" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                <rect key="frame" x="196.66666666666666" y="426" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="awE-am-ozC">
+                                <rect key="frame" x="138" y="184" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nxc-vU-LdA">
+                                <rect key="frame" x="138" y="226" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3U-Fc-2KH">
+                                <rect key="frame" x="143" y="301" width="87" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Register"/>
+                                <connections>
+                                    <action selector="registerPressed:" destination="GUZ-EJ-dat" eventType="touchUpInside" id="BTj-9q-x2g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DPF-e2-e5m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Amj-fi-C8M" firstAttribute="centerX" secondItem="cJz-Cr-KKT" secondAttribute="centerX" id="BhK-UJ-egH"/>
+                            <constraint firstItem="Amj-fi-C8M" firstAttribute="centerY" secondItem="cJz-Cr-KKT" secondAttribute="centerY" id="FOT-a9-amr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FRJ-bg-YTp"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="awE-am-ozC" id="MN2-Ny-Lit"/>
+                        <outlet property="passwordTextField" destination="Nxc-vU-LdA" id="QXo-gr-UcL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m52-vd-yQH" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016" y="-259"/>
+        </scene>
+        <!--SignIn View-->
+        <scene sceneID="Ggp-hd-B0T">
+            <objects>
+                <viewController title="SignIn View" id="2YO-ro-Wp2" customClass="SignInViewController" customModule="FlashChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CJV-H2-Vdg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTv-U4-5CS" userLabel="Title Label" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                <rect key="frame" x="196.66666666666666" y="426" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mcj-P7-TUK">
+                                <rect key="frame" x="138" y="184" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x1e-np-JXg">
+                                <rect key="frame" x="138" y="226" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEv-M4-Wg3">
+                                <rect key="frame" x="149" y="301" width="76" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign In"/>
+                                <connections>
+                                    <action selector="registerPressed:" destination="2YO-ro-Wp2" eventType="touchUpInside" id="ecR-Qv-EhR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jCz-ak-zaN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YTv-U4-5CS" firstAttribute="centerY" secondItem="CJV-H2-Vdg" secondAttribute="centerY" id="Ipj-iU-lTT"/>
+                            <constraint firstItem="YTv-U4-5CS" firstAttribute="centerX" secondItem="CJV-H2-Vdg" secondAttribute="centerX" id="SE4-PK-UaH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sKP-eP-PF6"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Mcj-P7-TUK" id="eAI-H7-5wC"/>
+                        <outlet property="passwordTextField" destination="x1e-np-JXg" id="Bgs-Zt-BQ5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NKV-1k-dP7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2015" y="470"/>
         </scene>
     </scenes>
     <resources>
