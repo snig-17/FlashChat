@@ -175,14 +175,19 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fft-Rt-98U">
-                                <rect key="frame" x="318" y="750" width="75" height="35"/>
+                                <rect key="frame" x="332" y="750" width="50" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="paperplane.circle.fill" catalog="system">
+                                    <color key="baseBackgroundColor" name="BrandLightPurple"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="sendPressed:" destination="w3C-p0-csb" eventType="touchUpInside" id="c4M-vm-OR6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vUr-Pu-Hmr"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BrandPurple"/>
                     </view>
                     <navigationItem key="navigationItem" id="3Dy-ID-U2R">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="eDh-le-MHM">
@@ -264,11 +269,18 @@
         <segue reference="PzY-HN-VfB"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="paperplane.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="BrandBlue">
             <color red="0.44705882352941179" green="0.72941176470588232" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandLightBlue">
             <color red="0.83529411764705885" green="0.90588235294117647" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandLightPurple">
+            <color red="0.49411764705882355" green="0.36078431372549019" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandPurple">
+            <color red="0.27843137254901962" green="0.30588235294117649" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
