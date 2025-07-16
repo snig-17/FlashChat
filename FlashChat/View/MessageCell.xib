@@ -45,7 +45,7 @@
                                     <constraint firstAttribute="bottom" secondItem="BkL-XT-93G" secondAttribute="bottom" constant="10" id="suX-ug-5Aq"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="3xf-tQ-g3Y">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="3xf-tQ-g3Y" userLabel="Right Image View">
                                 <rect key="frame" x="303" y="0.0" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="7vM-Rg-Um4"/>
@@ -65,9 +65,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="label" destination="BkL-XT-93G" id="AVI-cq-n42"/>
-                <outlet property="leftImageView" destination="Pkg-jN-Ior" id="GKB-zm-byJ"/>
+                <outlet property="leftImageView" destination="Pkg-jN-Ior" id="Ep9-hZ-RQ8"/>
                 <outlet property="messageBubble" destination="3cc-LR-Tvv" id="a6c-7U-eRj"/>
-                <outlet property="rightImageView" destination="Pkg-jN-Ior" id="I87-BI-eAB"/>
+                <outlet property="rightImageView" destination="3xf-tQ-g3Y" id="zD2-fC-GJa"/>
             </connections>
             <point key="canvasLocation" x="159.54198473282443" y="39.7887323943662"/>
         </tableViewCell>
